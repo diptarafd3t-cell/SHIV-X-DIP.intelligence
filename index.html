@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M x D.ai</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+          <h1>mxd-AI</h1>
+            <button id="settings-btn">⚙️ API Key</button>
+        </header>
+
+        <div id="api-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <p>Enter your Own Ai API Key.</p>
+                <input type="password" id="api-key-input" placeholder="AIzaSy...">
+                <button id="save-key-btn">Save Key</button>
+                <button id="close-modal-btn" class="secondary">Close</button>
+            </div>
+        </div>
+
+        <main id="chat-container">
+            <div class="message ai-message">
+                Hello! I am ready. Please click the ⚙️ icon to add your Gemini API key first, then ask me anything!
+            </div>
+        </main>
+
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+            <button id="send-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
